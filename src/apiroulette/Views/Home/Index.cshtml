@@ -11,6 +11,7 @@
             <li><a href="#top" class="title anchor">api roulette</a></li>
             <li><a href="#about" class="anchor">about</a></li>
             <li><a href="#tryit" class="anchor">try it</a></li>
+            <li><a href="#contact" class="anchor">contact</a></li>
         </ul>
     </div>
 </nav>
@@ -22,12 +23,17 @@
     <div class="inner-row">
         <h1>api roulette</h1>
         <h2>Get output from a random api.</h2>
-        <p>Enter something and you'll get the response for that query from a randomly selected api.</p>
+        <p id="tryit">Enter something and you'll get the response for that query from a randomly selected api.</p>
         @using (Html.BeginForm("random", "api", FormMethod.Get, new { }))
-        {
-            @Html.TextBoxFor(m => m.q, new { @class = "" })
-            <input type="submit" value="Go!" class="" />
+        {   
+            @Html.TextBoxFor(m => m.q, new { @class = "search" })
+            <input type="submit" value="Go!" class="button submit" />
         }
+        <br>
+        <br>
+        <div id="contact" class="contact">
+            <a class="button" href="mailto:jack@jackfinlay.com">email me</a>
+        </div>
     </div> 
 </section>
 <!-- /about -->

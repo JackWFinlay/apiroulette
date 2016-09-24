@@ -48,6 +48,16 @@ p {
 	top:-100px;
 }
 
+.button {
+	padding: 4px 4px 2px 4px;
+	text-decoration: none;
+	border-radius: 5px;
+	border: 2px solid $soft-black;
+	min-width: 100px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
 .hamburger {
 	font-size: 48px;
 	display: inline-block;
@@ -98,9 +108,8 @@ p {
 }
 
 .inner-row {
+    margin: 100px auto;
 	width: (8 / 12) * 100%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .nav {
@@ -118,12 +127,41 @@ p {
 
 .row {
 	float:left;
-  	border-bottom: 1px solid #dbdbdb;
+  	/*border-bottom: 1px solid #dbdbdb;*/
   	min-height: 200px;
 	height: auto;	
 	width: 100%;
 	z-index: 1;
 	overflow: hidden;
+}
+
+.search {
+    background-color: $primary-color;
+    font-family: $font-stack;
+    padding: 4px 6px;
+	text-decoration: none;
+	color: $soft-black;
+	font-size: 24px;
+	font-weight: normal;
+    padding: 4px 4px 2px 4px;
+	border-radius: 5px;
+	border: 2px solid $soft-black;
+    vertical-align: middle;
+}
+
+.submit {
+    background-color: $primary-color;
+    font-family: $font-stack;
+    padding: 4px 6px;
+	text-decoration: none;
+	color: $soft-black;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.submit:hover {
+    text-decoration: underline;
 }
 
 .title {
@@ -148,12 +186,6 @@ p {
 		transition: opacity 0.25s ease-in-out;
 		-moz-transition: opacity 0.25s ease-in-out;
 		-webkit-transition: opacity 0.25s ease-in-out;
-	}
-	
-	.contact-content {
-		width: 100%;
-		border-bottom: 1px solid #dbdbdb;
-    	padding-bottom: 20px;
 	}
 
 	.container h1 {
