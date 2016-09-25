@@ -2,6 +2,7 @@
     ViewData["Title"] = "api roulette";
 }
 @model apiroulette.Models.APIModel
+
 <div id="top"></div>
 <!-- nav -->
 <nav class="nav" id="nav">
@@ -11,6 +12,8 @@
             <li><a href="#top" class="title anchor">api roulette</a></li>
             <li><a href="#about" class="anchor">about</a></li>
             <li><a href="#tryit" class="anchor">try it</a></li>
+            <li><a href="#usage" class="anchor">usage</a></li>
+            <li><a href="#sources" class="anchor">sources</a></li>
             <li><a href="#contact" class="anchor">contact</a></li>
         </ul>
     </div>
@@ -18,22 +21,67 @@
 <div class="nav-spacer"></div>
 <!-- /nav -->
 <!-- about -->
-<section class="row about">
-    <div id="about" class="anchor-spacer"></div>
+<section class="row container">
+    
     <div class="inner-row">
+        <div id="about" class="anchor-spacer"></div>
         <h1>api roulette</h1>
-        <h2>Get output from a random api.</h2>
-        <p id="tryit">Enter something and you'll get the response for that query from a randomly selected api.</p>
+        <h2>Get output from a random API.</h2>
+
+        <div id="tryit" class="anchor-spacer"></div>
+        <p>Enter something and you'll get the response for that query from a randomly selected API. All APIs are publicly available and are in the JSON format. Not all actually require a query string.</p>
         @using (Html.BeginForm("random", "api", FormMethod.Get, new { }))
         {   
             @Html.TextBoxFor(m => m.q, new { @class = "search" })
             <input type="submit" value="Go!" class="button submit" />
         }
-        <br>
-        <br>
-        <div id="contact" class="contact">
-            <a class="button" href="mailto:jack@jackfinlay.com">email me</a>
-        </div>
+
+        <br />
+        <div id="usage" class="anchor-spacer"></div>
+        <h1>Usage</h1>
+        <p>To use the API Roulette API, use the endpoint <span class="code">http://apiroulette.com/api/random</span>, use the id <span class="code">q</span> for the query string.</p>
+        <p>E.g. <span class="code">http://apiroulette.com/api/random?q=duck</span></p>
+
+        <br />
+        <div id="sources" class="anchor-spacer"></div>
+        <h1>API sources</h1>
+        <ul>
+            <li class="list-item">
+                <a href="http://api.giphy.com">Giphy search</a>
+            </li>
+            <li class="list-item">
+                <a href="http://api.giphy.com">Giphy translate</a>
+            </li>
+            <li class="list-item">
+                <a href="https://www.mediawiki.org/wiki/API:Main_page">MediaWiki</a>
+            </li>
+            <li class="list-item">
+                <a href="https://www.mediawiki.org/wiki/API:Main_page">WikiMedia Commons</a>
+            </li>
+            <li class="list-item">
+                <a href="https://www.mediawiki.org/wiki/API:Main_page">Wikipedia - various languages</a>
+            </li>
+            <li class="list-item">
+                <a href="http://jsonip.com/">jsonip</a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.recipepuppy.com/about/api/">recipe puppy</a>
+            </li>
+            <li class="list-item">
+                <a href="https://qrng.anu.edu.au/API/api-demo.php">Quantum random number generator</a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.jsontest.com/">Json test date</a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.jsontest.com/">Json test md5</a>
+            </li>
+
+        </ul>
+        
+        <br />
+        <div id="contact" class="anchor-spacer"></div>
+        <a class="button" href="mailto:jack@jackfinlay.com">email me</a>
     </div> 
 </section>
 <!-- /about -->

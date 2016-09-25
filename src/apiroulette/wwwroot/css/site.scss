@@ -1,4 +1,4 @@
-﻿$font-stack: courier-new, monospace;/*"Helvetica Neue", Helvetica, Arial, sans-serif;*/
+﻿$font-stack: monospace;/*"Helvetica Neue", Helvetica, Arial, sans-serif;*/
 $primary-color: #fff;
 $soft-black: #333;
 
@@ -16,6 +16,7 @@ a:hover {
 	padding: 4px 4px 2px 4px;
 	border: 2px solid $soft-black;
 	border-radius: 5px;
+    color: $soft-black;
 }
 
 
@@ -38,11 +39,6 @@ p {
 	font-weight: 300;
 }
 
-.about {
-    border-top: 1px solid #dbdbdb;
-    color: $soft-black;
-}
-
 .anchor-spacer {
 	position:relative; 
 	top:-100px;
@@ -56,6 +52,15 @@ p {
 	min-width: 100px;
 	vertical-align: middle;
 	display: inline-block;
+}
+
+.code {
+    font-family: 'Courier New';
+}
+
+.container {
+    border-top: 1px solid #dbdbdb;
+    color: $soft-black;
 }
 
 .hamburger {
@@ -112,6 +117,10 @@ p {
 	width: (8 / 12) * 100%;
 }
 
+.list-item {
+    margin: 10px 0;
+}
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -143,10 +152,11 @@ p {
 	color: $soft-black;
 	font-size: 24px;
 	font-weight: normal;
-    padding: 4px 4px 2px 4px;
+    padding: 5px 4px 3px 4px;
 	border-radius: 5px;
 	border: 2px solid $soft-black;
     vertical-align: middle;
+    margin: 10px 0;
 }
 
 .submit {
@@ -158,6 +168,7 @@ p {
 	text-transform: uppercase;
 	font-size: 24px;
 	font-weight: normal;
+    margin: 10px 0;
 }
 
 .submit:hover {
@@ -181,16 +192,6 @@ p {
 
 @media all and (max-width: 1070px) {
 
-	.code-img {
-		opacity: 0.25;
-		transition: opacity 0.25s ease-in-out;
-		-moz-transition: opacity 0.25s ease-in-out;
-		-webkit-transition: opacity 0.25s ease-in-out;
-	}
-
-	.container h1 {
-		font-size: 12vh;
-	}
 
 	.inner-nav {
 		margin-left: 150px
@@ -206,10 +207,6 @@ p {
 	.about-inner {
 		width: 90%;
 
-	}
-
-	.container h1 {
-		font-size: 12vw;
 	}
 
 	.hamburger {

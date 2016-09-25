@@ -4,7 +4,7 @@
 
     var openMenu = function () {
 
-        $("#nav").animate({ height: "278px" }, 250);
+        $("#nav").animate({ height: "290px" }, 250);
         $("#menu > li").css("display", "block");
 
         hamburgerOpen = true;

@@ -25,8 +25,12 @@ namespace apiroulette.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("User-Agent", "apiroulette.com" );
 
-                UrlEncoder urlEncoder = UrlEncoder.Create();
-                string encodedUrl = urlEncoder.Encode(q);
+                if ( !String.IsNullOrWhiteSpace(q))
+                {
+                    UrlEncoder urlEncoder = UrlEncoder.Create();
+                    string encodedUrl = urlEncoder.Encode(q);
+                }
+                
                 string url = APIs.GetQueryString(q);
 
                 HttpResponseMessage response = await client.GetAsync(url);
